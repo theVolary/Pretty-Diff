@@ -61,7 +61,7 @@ var diffview = function (baseTextLines, newTextLines, baseTextName, newTextName,
         "use strict";
         var thead = "<table class='diff'><thead><tr>" + ((inline === true) ? "<th class='texttitle' colspan='3'>" + baseTextName + " vs. " + newTextName + "</th></tr></thead><tbody>" : "<th class='texttitle' colspan='2'>" + baseTextName + "</th><th class='texttitle' colspan='2'>" + newTextName + "</th></tr></thead><tbody>"),
             tbody = [],
-            tfoot = "</tbody><tfoot><tr><th class='author' colspan='" + ((inline === true) ? "3" : "4") + "'>Original diff view created as DOM objects by <a href='https://github.com/cemerick/jsdifflib'>jsdifflib</a>. Diff view recreated as a JavaScript array by <a href='http://prettydiff.com/'>Austin Cheney</a>.</th></tr></tfoot></table>",
+            tfoot = "</tbody></table>",//</tbody><tfoot><tr><th class='author' colspan='" + ((inline === true) ? "3" : "4") + "'>Original diff view created as DOM objects by <a href='https://github.com/cemerick/jsdifflib'>jsdifflib</a>. Diff view recreated as a JavaScript array by <a href='http://prettydiff.com/'>Austin Cheney</a>.</th></tr></tfoot></table>",
             node = [],
             rows = [],
             idx,
